@@ -37,7 +37,7 @@ def generate_hashtags(target_keyword, max_results=30):
 
     sorted_hashtags = sorted(hashtag_counts.items(), key=lambda x: x[1], reverse=True)
 
-    formatted_hashtags = [f"#{hashtag[0]}" for hashtag in sorted_hashtags[:15]]
+    formatted_hashtags = [f"{hashtag[0]}" for hashtag in sorted_hashtags[:15]]
 
     return formatted_hashtags
 
@@ -62,6 +62,6 @@ def lambda_handler(event, context):
     }
 
 if __name__ == '__main__':
-    event = {'keyword': 'programming tutorials'}
+    event = {'keyword': 'video gaming'}
     context = {}
     print(lambda_handler(event, context))
